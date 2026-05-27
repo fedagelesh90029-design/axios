@@ -39,7 +39,7 @@ const totalWeight = computed(() => cart.totalCount.value * 15) // Average 15kg p
     <div class="container mx-auto px-4">
       <!-- Header -->
       <div class="flex items-center gap-4 mb-8">
-        <router-link to="/catalog" class="p-2 bg-white rounded-lg border border-gray-100 text-gray-400 hover:text-istok-blue transition-colors">
+        <router-link to="/catalog" class="p-2 bg-white rounded-lg border border-gray-100 text-gray-400 hover:text-axius-blue transition-colors">
           <ChevronLeft :size="20" />
         </router-link>
         <h1 class="text-3xl font-black text-gray-900">Оформление заказа</h1>
@@ -49,7 +49,7 @@ const totalWeight = computed(() => cart.totalCount.value * 15) // Average 15kg p
         <ShoppingBag :size="80" class="mx-auto text-gray-200 mb-6" />
         <h2 class="text-2xl font-bold text-gray-900 mb-2">Ваша корзина пуста</h2>
         <p class="text-gray-500 mb-8">Для оформления заказа добавьте товары из каталога</p>
-        <router-link to="/catalog" class="bg-istok-blue text-white px-10 py-4 rounded-xl font-bold hover:bg-istok-dark-blue transition-all shadow-lg shadow-istok-blue/20 inline-block">
+        <router-link to="/catalog" class="bg-axius-blue text-white px-10 py-4 rounded-xl font-bold hover:bg-axius-dark-blue transition-all shadow-lg shadow-axius-blue/20 inline-block">
           Перейти в каталог
         </router-link>
       </div>
@@ -60,7 +60,7 @@ const totalWeight = computed(() => cart.totalCount.value * 15) // Average 15kg p
           <!-- 1. Cart Items Summary -->
           <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
             <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-              <span class="w-8 h-8 bg-istok-blue text-white rounded-full flex items-center justify-center text-sm">1</span>
+              <span class="w-8 h-8 bg-axius-blue text-white rounded-full flex items-center justify-center text-sm">1</span>
               Состав заказа
             </h2>
             <div class="divide-y divide-gray-50">
@@ -75,7 +75,7 @@ const totalWeight = computed(() => cart.totalCount.value * 15) // Average 15kg p
                     <div class="font-black text-gray-900">{{ formatPrice(item.price * item.quantity) }}</div>
                   </div>
                 </div>
-                <button @click="cart.removeItem(item.id)" class="text-gray-300 hover:text-istok-red transition-colors">
+                <button @click="cart.removeItem(item.id)" class="text-gray-300 hover:text-axius-red transition-colors">
                   <Trash2 :size="18" />
                 </button>
               </div>
@@ -85,16 +85,16 @@ const totalWeight = computed(() => cart.totalCount.value * 15) // Average 15kg p
           <!-- 2. Delivery Method -->
           <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
             <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-              <span class="w-8 h-8 bg-istok-blue text-white rounded-full flex items-center justify-center text-sm">2</span>
+              <span class="w-8 h-8 bg-axius-blue text-white rounded-full flex items-center justify-center text-sm">2</span>
               Способ получения
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <button 
                 @click="deliveryMethod = 'delivery'"
                 class="flex items-center gap-4 p-5 rounded-2xl border-2 transition-all text-left"
-                :class="deliveryMethod === 'delivery' ? 'border-istok-blue bg-istok-blue/[0.02]' : 'border-gray-100 hover:border-gray-200'"
+                :class="deliveryMethod === 'delivery' ? 'border-axius-blue bg-axius-blue/[0.02]' : 'border-gray-100 hover:border-gray-200'"
               >
-                <div class="p-3 bg-gray-50 rounded-xl" :class="{ 'text-istok-blue bg-istok-blue/10': deliveryMethod === 'delivery' }">
+                <div class="p-3 bg-gray-50 rounded-xl" :class="{ 'text-axius-blue bg-axius-blue/10': deliveryMethod === 'delivery' }">
                   <Truck :size="24" />
                 </div>
                 <div>
@@ -105,14 +105,14 @@ const totalWeight = computed(() => cart.totalCount.value * 15) // Average 15kg p
               <button 
                 @click="deliveryMethod = 'pickup'"
                 class="flex items-center gap-4 p-5 rounded-2xl border-2 transition-all text-left"
-                :class="deliveryMethod === 'pickup' ? 'border-istok-blue bg-istok-blue/[0.02]' : 'border-gray-100 hover:border-gray-200'"
+                :class="deliveryMethod === 'pickup' ? 'border-axius-blue bg-axius-blue/[0.02]' : 'border-gray-100 hover:border-gray-200'"
               >
-                <div class="p-3 bg-gray-50 rounded-xl" :class="{ 'text-istok-blue bg-istok-blue/10': deliveryMethod === 'pickup' }">
+                <div class="p-3 bg-gray-50 rounded-xl" :class="{ 'text-axius-blue bg-axius-blue/10': deliveryMethod === 'pickup' }">
                   <Store :size="24" />
                 </div>
                 <div>
                   <div class="font-bold text-gray-900">Самовывоз</div>
-                  <div class="text-xs text-gray-500">Из магазина базы ИСТОК</div>
+                  <div class="text-xs text-gray-500">Из магазина базы АКСИУС</div>
                 </div>
               </button>
             </div>
@@ -120,7 +120,7 @@ const totalWeight = computed(() => cart.totalCount.value * 15) // Average 15kg p
             <div v-if="deliveryMethod === 'delivery'" class="space-y-4">
               <div>
                 <label class="block text-sm font-bold text-gray-700 mb-2">Адрес доставки</label>
-                <input v-model="formData.address" type="text" placeholder="г. Сочи, ул. Мира, д. 1" class="w-full bg-gray-50 border-none rounded-xl py-4 px-6 focus:ring-1 focus:ring-istok-blue transition-all">
+                <input v-model="formData.address" type="text" placeholder="г. Сочи, ул. Мира, д. 1" class="w-full bg-gray-50 border-none rounded-xl py-4 px-6 focus:ring-1 focus:ring-axius-blue transition-all">
               </div>
               <div class="p-4 bg-amber-50 rounded-xl flex gap-3 text-amber-700 text-sm">
                 <Info :size="20" class="flex-shrink-0" />
@@ -132,16 +132,16 @@ const totalWeight = computed(() => cart.totalCount.value * 15) // Average 15kg p
           <!-- 3. Payment Method -->
           <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
             <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-              <span class="w-8 h-8 bg-istok-blue text-white rounded-full flex items-center justify-center text-sm">3</span>
+              <span class="w-8 h-8 bg-axius-blue text-white rounded-full flex items-center justify-center text-sm">3</span>
               Способ оплаты
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <button 
                 @click="paymentMethod = 'cash'"
                 class="flex items-center gap-4 p-5 rounded-2xl border-2 transition-all text-left"
-                :class="paymentMethod === 'cash' ? 'border-istok-blue bg-istok-blue/[0.02]' : 'border-gray-100 hover:border-gray-200'"
+                :class="paymentMethod === 'cash' ? 'border-axius-blue bg-axius-blue/[0.02]' : 'border-gray-100 hover:border-gray-200'"
               >
-                <div class="p-3 bg-gray-50 rounded-xl" :class="{ 'text-istok-blue bg-istok-blue/10': paymentMethod === 'cash' }">
+                <div class="p-3 bg-gray-50 rounded-xl" :class="{ 'text-axius-blue bg-axius-blue/10': paymentMethod === 'cash' }">
                   <CreditCard :size="24" />
                 </div>
                 <div>
@@ -152,9 +152,9 @@ const totalWeight = computed(() => cart.totalCount.value * 15) // Average 15kg p
               <button 
                 @click="paymentMethod = 'invoice'"
                 class="flex items-center gap-4 p-5 rounded-2xl border-2 transition-all text-left"
-                :class="paymentMethod === 'invoice' ? 'border-istok-blue bg-istok-blue/[0.02]' : 'border-gray-100 hover:border-gray-200'"
+                :class="paymentMethod === 'invoice' ? 'border-axius-blue bg-axius-blue/[0.02]' : 'border-gray-100 hover:border-gray-200'"
               >
-                <div class="p-3 bg-gray-50 rounded-xl" :class="{ 'text-istok-blue bg-istok-blue/10': paymentMethod === 'invoice' }">
+                <div class="p-3 bg-gray-50 rounded-xl" :class="{ 'text-axius-blue bg-axius-blue/10': paymentMethod === 'invoice' }">
                   <Store :size="24" />
                 </div>
                 <div>
@@ -168,11 +168,11 @@ const totalWeight = computed(() => cart.totalCount.value * 15) // Average 15kg p
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-sm font-bold text-gray-700 mb-2">Название компании</label>
-                  <input v-model="formData.companyName" type="text" class="w-full bg-gray-50 border-none rounded-xl py-4 px-6 focus:ring-1 focus:ring-istok-blue transition-all">
+                  <input v-model="formData.companyName" type="text" class="w-full bg-gray-50 border-none rounded-xl py-4 px-6 focus:ring-1 focus:ring-axius-blue transition-all">
                 </div>
                 <div>
                   <label class="block text-sm font-bold text-gray-700 mb-2">ИНН</label>
-                  <input v-model="formData.inn" type="text" class="w-full bg-gray-50 border-none rounded-xl py-4 px-6 focus:ring-1 focus:ring-istok-blue transition-all">
+                  <input v-model="formData.inn" type="text" class="w-full bg-gray-50 border-none rounded-xl py-4 px-6 focus:ring-1 focus:ring-axius-blue transition-all">
                 </div>
               </div>
             </div>
@@ -203,22 +203,22 @@ const totalWeight = computed(() => cart.totalCount.value * 15) // Average 15kg p
             <div class="border-t border-gray-100 pt-6 mb-8">
               <div class="flex justify-between items-end">
                 <span class="text-gray-900 font-bold">Итого к оплате</span>
-                <span class="text-3xl font-black text-istok-blue leading-none">{{ formatPrice(finalTotal) }}</span>
+                <span class="text-3xl font-black text-axius-blue leading-none">{{ formatPrice(finalTotal) }}</span>
               </div>
             </div>
 
             <div class="space-y-4 mb-8">
               <div>
                 <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Контактный телефон</label>
-                <input v-model="formData.phone" type="tel" placeholder="+7 (___) ___-__-__" class="w-full bg-gray-50 border-none rounded-xl py-4 px-6 focus:ring-1 focus:ring-istok-blue transition-all font-bold">
+                <input v-model="formData.phone" type="tel" placeholder="+7 (___) ___-__-__" class="w-full bg-gray-50 border-none rounded-xl py-4 px-6 focus:ring-1 focus:ring-axius-blue transition-all font-bold">
               </div>
               <div>
                 <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Имя</label>
-                <input v-model="formData.name" type="text" placeholder="Иван Иванов" class="w-full bg-gray-50 border-none rounded-xl py-4 px-6 focus:ring-1 focus:ring-istok-blue transition-all font-bold">
+                <input v-model="formData.name" type="text" placeholder="Иван Иванов" class="w-full bg-gray-50 border-none rounded-xl py-4 px-6 focus:ring-1 focus:ring-axius-blue transition-all font-bold">
               </div>
             </div>
 
-            <button class="w-full bg-istok-blue text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-istok-blue/30 hover:bg-istok-dark-blue hover:-translate-y-1 transition-all active:scale-95 uppercase tracking-wider">
+            <button class="w-full bg-axius-blue text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-axius-blue/30 hover:bg-axius-dark-blue hover:-translate-y-1 transition-all active:scale-95 uppercase tracking-wider">
               Оформить заказ
             </button>
             
@@ -227,18 +227,19 @@ const totalWeight = computed(() => cart.totalCount.value * 15) // Average 15kg p
             </p>
           </div>
 
-          <div class="bg-istok-blue/5 rounded-3xl p-6 border border-istok-blue/10">
-            <h4 class="font-bold text-istok-blue mb-2 flex items-center gap-2">
+          <div class="bg-axius-blue/5 rounded-3xl p-6 border border-axius-blue/10">
+            <h4 class="font-bold text-axius-blue mb-2 flex items-center gap-2">
               <Info :size="18" />
               Нужна помощь?
             </h4>
             <p class="text-xs text-gray-600 leading-relaxed">
               Наш менеджер поможет подобрать транспорт и рассчитать точную стоимость доставки для крупных партий.
             </p>
-            <a href="tel:+78622000000" class="text-sm font-bold text-istok-blue mt-3 block">+7 (862) 200-00-00</a>
+            <a href="tel:+78622000000" class="text-sm font-bold text-axius-blue mt-3 block">+7 (862) 200-00-00</a>
           </div>
         </aside>
       </div>
     </div>
   </div>
 </template>
+

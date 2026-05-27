@@ -22,7 +22,7 @@ const addToCart = () => {
       <span v-if="product.badge" :class="[product.badgeColor, 'text-[10px] font-bold text-white px-2.5 py-1 rounded-md shadow-sm']">
         {{ product.badge }}
       </span>
-      <span v-if="product.discount" class="bg-istok-red text-[10px] font-bold text-white px-2.5 py-1 rounded-md shadow-sm">
+      <span v-if="product.discount" class="bg-axius-red text-[10px] font-bold text-white px-2.5 py-1 rounded-md shadow-sm">
         {{ product.discount }}
       </span>
     </div>
@@ -41,7 +41,7 @@ const addToCart = () => {
     </div>
 
     <!-- Name -->
-    <router-link :to="'/product/' + product.id" class="text-sm font-bold text-gray-800 mb-4 line-clamp-2 flex-grow hover:text-istok-blue cursor-pointer transition-colors leading-relaxed">
+    <router-link :to="'/product/' + product.id" class="text-sm font-bold text-gray-800 mb-4 line-clamp-2 flex-grow hover:text-axius-blue cursor-pointer transition-colors leading-relaxed">
       {{ product.name }}
     </router-link>
 
@@ -60,10 +60,11 @@ const addToCart = () => {
     <!-- Action -->
     <button 
       @click="addToCart"
-      class="w-full bg-istok-blue text-white py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2.5 hover:bg-istok-dark-blue active:scale-95 transition-all shadow-lg shadow-istok-blue/20"
+      class="w-full bg-axius-blue text-white py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2.5 hover:bg-axius-dark-blue active:scale-95 transition-all shadow-lg shadow-axius-blue/20"
     >
       <ShoppingCart :size="18" />
       В корзину
     </button>
   </div>
 </template>
+

@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-istok-blue: #0066ff;
-  --color-istok-dark-blue: #004db3;
-  --color-istok-red: #ee3124;
-  --color-istok-gray: #f4f4f4;
+  --color-axius-blue: #0066ff;
+  --color-axius-dark-blue: #004db3;
+  --color-axius-red: #ee3124;
+  --color-axius-gray: #f4f4f4;
   
   --font-sans: "Inter", "system-ui", "sans-serif";
 }
 
 :root {
-  --istok-blue: #0066ff;
-  --istok-red: #ee3124;
+  --axius-blue: #0066ff;
+  --axius-red: #ee3124;
 }
 
 body {

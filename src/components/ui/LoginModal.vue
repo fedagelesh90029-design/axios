@@ -26,7 +26,7 @@ const emit = defineEmits(['close'])
               <div class="relative">
                 <input 
                   type="text" 
-                  class="w-full border border-gray-300 rounded-lg py-3 px-4 pl-12 focus:border-istok-blue focus:ring-1 focus:ring-istok-blue transition-all"
+                  class="w-full border border-gray-300 rounded-lg py-3 px-4 pl-12 focus:border-axius-blue focus:ring-1 focus:ring-axius-blue transition-all"
                   placeholder="example@mail.ru"
                 >
                 <Mail class="absolute left-4 top-3.5 text-gray-400" :size="20" />
@@ -38,7 +38,7 @@ const emit = defineEmits(['close'])
               <div class="relative">
                 <input 
                   type="password" 
-                  class="w-full border border-gray-300 rounded-lg py-3 px-4 pl-12 focus:border-istok-blue focus:ring-1 focus:ring-istok-blue transition-all"
+                  class="w-full border border-gray-300 rounded-lg py-3 px-4 pl-12 focus:border-axius-blue focus:ring-1 focus:ring-axius-blue transition-all"
                   placeholder="••••••••"
                 >
                 <Lock class="absolute left-4 top-3.5 text-gray-400" :size="20" />
@@ -47,13 +47,13 @@ const emit = defineEmits(['close'])
 
             <div class="flex items-center justify-between text-sm">
               <label class="flex items-center gap-2 cursor-pointer">
-                <input type="checkbox" class="rounded text-istok-blue focus:ring-istok-blue">
+                <input type="checkbox" class="rounded text-axius-blue focus:ring-axius-blue">
                 <span class="text-gray-600">Запомнить меня</span>
               </label>
-              <a href="#" class="text-istok-blue hover:underline font-medium">Забыли пароль?</a>
+              <a href="#" class="text-axius-blue hover:underline font-medium">Забыли пароль?</a>
             </div>
 
-            <button class="w-full bg-istok-blue text-white py-4 rounded-xl font-bold text-lg hover:bg-istok-dark-blue transition-all shadow-lg shadow-istok-blue/20">
+            <button class="w-full bg-axius-blue text-white py-4 rounded-xl font-bold text-lg hover:bg-axius-dark-blue transition-all shadow-lg shadow-axius-blue/20">
               Войти
             </button>
           </form>
@@ -78,7 +78,7 @@ const emit = defineEmits(['close'])
 
           <p class="mt-8 text-center text-sm text-gray-500">
             Нет аккаунта? 
-            <a href="#" class="text-istok-blue font-bold hover:underline">Зарегистрироваться</a>
+            <a href="#" class="text-axius-blue font-bold hover:underline">Зарегистрироваться</a>
           </p>
         </div>
       </div>
@@ -94,3 +94,4 @@ const emit = defineEmits(['close'])
   opacity: 0;
 }
 </style>
+

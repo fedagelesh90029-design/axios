@@ -8,7 +8,7 @@
       <div class="relative bg-white rounded-3xl overflow-hidden h-[300px] flex items-center px-12 group cursor-pointer border border-gray-100 shadow-xl">
         <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center group-hover:scale-105 transition-transform duration-1000"></div>
         <div class="relative z-10 max-w-sm">
-          <span class="text-[10px] font-black uppercase text-istok-blue mb-3 block tracking-widest">В наличии на базе</span>
+          <span class="text-[10px] font-black uppercase text-axius-blue mb-3 block tracking-widest">В наличии на базе</span>
           <h3 class="text-3xl font-black text-gray-900 mb-6 leading-tight">Гипсокартон Knauf и комплектующие</h3>
           <p class="text-gray-500 mb-8 font-medium">Весь ассортимент ГКЛ, профилей и смесей в одном месте. Отгрузка за 30 минут!</p>
           <router-link to="/catalog" class="bg-gray-900 text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-gray-800 transition-colors shadow-lg">
@@ -33,3 +33,4 @@
     </div>
   </section>
 </template>
+

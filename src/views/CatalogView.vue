@@ -48,9 +48,9 @@ const filteredProducts = computed(() => {
     <!-- Breadcrumbs -->
     <div class="container mx-auto px-4 py-6">
       <nav class="flex items-center gap-2 text-sm text-gray-400 font-medium">
-        <router-link to="/" class="hover:text-istok-blue transition-colors">Главная</router-link>
+        <router-link to="/" class="hover:text-axius-blue transition-colors">Главная</router-link>
         <ChevronRight :size="14" />
-        <router-link to="/catalog" class="hover:text-istok-blue transition-colors">Каталог</router-link>
+        <router-link to="/catalog" class="hover:text-axius-blue transition-colors">Каталог</router-link>
         <template v-if="route.params.category">
           <ChevronRight :size="14" />
           <span class="text-gray-900">{{ currentCategory.name }}</span>
@@ -66,24 +66,24 @@ const filteredProducts = computed(() => {
           <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 sticky top-40">
             <div class="flex justify-between items-center mb-8">
               <h3 class="font-bold text-gray-900 flex items-center gap-2">
-                <Filter :size="18" class="text-istok-blue" />
+                <Filter :size="18" class="text-axius-blue" />
                 Фильтры
               </h3>
-              <button class="text-xs text-istok-blue font-bold hover:underline">Сбросить</button>
+              <button class="text-xs text-axius-blue font-bold hover:underline">Сбросить</button>
             </div>
 
             <!-- Categories -->
             <div class="mb-8">
               <h4 class="text-sm font-bold text-gray-900 mb-4 flex justify-between items-center group cursor-pointer">
                 Категории
-                <ChevronDown :size="16" class="text-gray-400 group-hover:text-istok-blue transition-colors" />
+                <ChevronDown :size="16" class="text-gray-400 group-hover:text-axius-blue transition-colors" />
               </h4>
               <ul class="space-y-3">
                 <li v-for="cat in categories" :key="cat.slug">
                   <router-link 
                     :to="'/catalog/' + cat.slug" 
-                    class="text-sm text-gray-600 hover:text-istok-blue flex justify-between items-center transition-colors"
-                    :class="{ 'text-istok-blue font-bold': route.params.category === cat.slug }"
+                    class="text-sm text-gray-600 hover:text-axius-blue flex justify-between items-center transition-colors"
+                    :class="{ 'text-axius-blue font-bold': route.params.category === cat.slug }"
                   >
                     {{ cat.name }}
                     <span class="text-[10px] bg-gray-100 px-1.5 py-0.5 rounded text-gray-400">24</span>
@@ -96,10 +96,10 @@ const filteredProducts = computed(() => {
             <div class="mb-8">
               <h4 class="text-sm font-bold text-gray-900 mb-4">Цена, ₽</h4>
               <div class="grid grid-cols-2 gap-3 mb-4">
-                <input type="number" placeholder="От" class="bg-gray-50 border-none rounded-lg p-2 text-sm focus:ring-1 focus:ring-istok-blue w-full">
-                <input type="number" placeholder="До" class="bg-gray-50 border-none rounded-lg p-2 text-sm focus:ring-1 focus:ring-istok-blue w-full">
+                <input type="number" placeholder="От" class="bg-gray-50 border-none rounded-lg p-2 text-sm focus:ring-1 focus:ring-axius-blue w-full">
+                <input type="number" placeholder="До" class="bg-gray-50 border-none rounded-lg p-2 text-sm focus:ring-1 focus:ring-axius-blue w-full">
               </div>
-              <input type="range" class="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-istok-blue">
+              <input type="range" class="w-full h-1.5 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-axius-blue">
             </div>
 
             <!-- Brands -->
@@ -107,13 +107,13 @@ const filteredProducts = computed(() => {
               <h4 class="text-sm font-bold text-gray-900 mb-4">Бренд</h4>
               <div class="space-y-3">
                 <label v-for="brand in ['Makita', 'Bosch', 'DeWalt', 'Metabo']" :key="brand" class="flex items-center gap-3 cursor-pointer group">
-                  <input type="checkbox" class="rounded border-gray-300 text-istok-blue focus:ring-istok-blue">
-                  <span class="text-sm text-gray-600 group-hover:text-istok-blue transition-colors">{{ brand }}</span>
+                  <input type="checkbox" class="rounded border-gray-300 text-axius-blue focus:ring-axius-blue">
+                  <span class="text-sm text-gray-600 group-hover:text-axius-blue transition-colors">{{ brand }}</span>
                 </label>
               </div>
             </div>
 
-            <button class="w-full bg-istok-blue text-white py-3 rounded-xl font-bold text-sm shadow-lg shadow-istok-blue/20 hover:bg-istok-dark-blue transition-all">
+            <button class="w-full bg-axius-blue text-white py-3 rounded-xl font-bold text-sm shadow-lg shadow-axius-blue/20 hover:bg-axius-dark-blue transition-all">
               Показать товары
             </button>
           </div>
@@ -139,14 +139,14 @@ const filteredProducts = computed(() => {
               <button 
                 @click="viewMode = 'grid'" 
                 class="p-2 rounded-md transition-all"
-                :class="viewMode === 'grid' ? 'bg-white shadow-sm text-istok-blue' : 'text-gray-400 hover:text-gray-600'"
+                :class="viewMode === 'grid' ? 'bg-white shadow-sm text-axius-blue' : 'text-gray-400 hover:text-gray-600'"
               >
                 <LayoutGrid :size="18" />
               </button>
               <button 
                 @click="viewMode = 'list'" 
                 class="p-2 rounded-md transition-all"
-                :class="viewMode === 'list' ? 'bg-white shadow-sm text-istok-blue' : 'text-gray-400 hover:text-gray-600'"
+                :class="viewMode === 'list' ? 'bg-white shadow-sm text-axius-blue' : 'text-gray-400 hover:text-gray-600'"
               >
                 <List :size="18" />
               </button>
@@ -166,7 +166,7 @@ const filteredProducts = computed(() => {
               </div>
               <div class="flex-grow flex flex-col justify-between py-1">
                 <div>
-                  <h3 class="font-bold text-gray-800 hover:text-istok-blue cursor-pointer mb-2">{{ product.name }}</h3>
+                  <h3 class="font-bold text-gray-800 hover:text-axius-blue cursor-pointer mb-2">{{ product.name }}</h3>
                   <div class="flex items-center gap-4 text-xs text-gray-400 font-medium">
                     <span>Артикул: {{ 1000 + product.id }}</span>
                     <span class="text-emerald-600">В наличии</span>
@@ -177,7 +177,7 @@ const filteredProducts = computed(() => {
                     <span class="text-xl font-black text-gray-900">{{ product.price }} ₽</span>
                     <span v-if="product.oldPrice" class="text-sm text-gray-400 line-through">{{ product.oldPrice }} ₽</span>
                   </div>
-                  <button class="bg-istok-blue text-white px-6 py-2 rounded-lg font-bold text-sm hover:bg-istok-dark-blue transition-colors">
+                  <button class="bg-axius-blue text-white px-6 py-2 rounded-lg font-bold text-sm hover:bg-axius-dark-blue transition-colors">
                     В корзину
                   </button>
                 </div>
@@ -187,19 +187,19 @@ const filteredProducts = computed(() => {
 
           <!-- Pagination -->
           <div class="mt-12 flex justify-center gap-2">
-            <button class="w-10 h-10 rounded-lg flex items-center justify-center font-bold bg-white border border-gray-200 text-gray-400 hover:border-istok-blue hover:text-istok-blue transition-all cursor-not-allowed">
+            <button class="w-10 h-10 rounded-lg flex items-center justify-center font-bold bg-white border border-gray-200 text-gray-400 hover:border-axius-blue hover:text-axius-blue transition-all cursor-not-allowed">
               &lt;
             </button>
-            <button class="w-10 h-10 rounded-lg flex items-center justify-center font-bold bg-istok-blue text-white shadow-lg shadow-istok-blue/20">
+            <button class="w-10 h-10 rounded-lg flex items-center justify-center font-bold bg-axius-blue text-white shadow-lg shadow-axius-blue/20">
               1
             </button>
-            <button class="w-10 h-10 rounded-lg flex items-center justify-center font-bold bg-white border border-gray-200 text-gray-600 hover:border-istok-blue hover:text-istok-blue transition-all">
+            <button class="w-10 h-10 rounded-lg flex items-center justify-center font-bold bg-white border border-gray-200 text-gray-600 hover:border-axius-blue hover:text-axius-blue transition-all">
               2
             </button>
-            <button class="w-10 h-10 rounded-lg flex items-center justify-center font-bold bg-white border border-gray-200 text-gray-600 hover:border-istok-blue hover:text-istok-blue transition-all">
+            <button class="w-10 h-10 rounded-lg flex items-center justify-center font-bold bg-white border border-gray-200 text-gray-600 hover:border-axius-blue hover:text-axius-blue transition-all">
               3
             </button>
-            <button class="w-10 h-10 rounded-lg flex items-center justify-center font-bold bg-white border border-gray-200 text-gray-600 hover:border-istok-blue hover:text-istok-blue transition-all">
+            <button class="w-10 h-10 rounded-lg flex items-center justify-center font-bold bg-white border border-gray-200 text-gray-600 hover:border-axius-blue hover:text-axius-blue transition-all">
               &gt;
             </button>
           </div>
@@ -208,3 +208,4 @@ const filteredProducts = computed(() => {
     </div>
   </div>
 </template>
+

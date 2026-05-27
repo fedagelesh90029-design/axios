@@ -14,3 +14,4 @@ import PromoBanners from '../components/home/PromoBanners.vue'
     <ProductSection title="Новинки" />
   </div>
 </template>
+

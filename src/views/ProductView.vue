@@ -65,9 +65,9 @@ const updateFromPacks = () => {
     <!-- Breadcrumbs -->
     <div class="container mx-auto px-4 mb-10">
       <nav class="flex items-center gap-2 text-sm text-gray-400 font-medium">
-        <router-link to="/" class="hover:text-istok-blue transition-colors">Главная</router-link>
+        <router-link to="/" class="hover:text-axius-blue transition-colors">Главная</router-link>
         <ChevronRight :size="14" />
-        <router-link to="/catalog" class="hover:text-istok-blue transition-colors">Каталог</router-link>
+        <router-link to="/catalog" class="hover:text-axius-blue transition-colors">Каталог</router-link>
         <ChevronRight :size="14" />
         <span class="text-gray-900 line-clamp-1">{{ product.name }}</span>
       </nav>
@@ -81,7 +81,7 @@ const updateFromPacks = () => {
             <img :src="product.image" :alt="product.name" class="max-h-full object-contain group-hover:scale-110 transition-transform duration-700">
           </div>
           <div class="grid grid-cols-4 gap-4">
-            <div v-for="i in 4" :key="i" class="aspect-square bg-gray-50 rounded-xl border border-gray-100 p-2 cursor-pointer hover:border-istok-blue transition-colors">
+            <div v-for="i in 4" :key="i" class="aspect-square bg-gray-50 rounded-xl border border-gray-100 p-2 cursor-pointer hover:border-axius-blue transition-colors">
               <img :src="product.image" class="w-full h-full object-contain opacity-50 hover:opacity-100 transition-opacity">
             </div>
           </div>
@@ -137,11 +137,11 @@ const updateFromPacks = () => {
             <!-- Standard Counter -->
             <div v-else class="flex items-center gap-4 mb-8">
               <div class="flex items-center bg-white rounded-xl border border-gray-200 p-1">
-                <button @click="quantity > 1 && quantity--" class="p-3 text-gray-400 hover:text-istok-blue transition-colors">
+                <button @click="quantity > 1 && quantity--" class="p-3 text-gray-400 hover:text-axius-blue transition-colors">
                   <Minus :size="20" />
                 </button>
                 <input v-model="quantity" type="number" class="w-16 text-center font-black text-xl outline-none">
-                <button @click="quantity++" class="p-3 text-gray-400 hover:text-istok-blue transition-colors">
+                <button @click="quantity++" class="p-3 text-gray-400 hover:text-axius-blue transition-colors">
                   <Plus :size="20" />
                 </button>
               </div>
@@ -151,7 +151,7 @@ const updateFromPacks = () => {
             <div class="flex flex-col sm:flex-row gap-4">
               <button 
                 @click="addToCart"
-                class="flex-grow bg-istok-blue text-white py-5 rounded-2xl font-black text-lg flex items-center justify-center gap-3 shadow-xl shadow-istok-blue/30 hover:bg-istok-dark-blue active:scale-95 transition-all"
+                class="flex-grow bg-axius-blue text-white py-5 rounded-2xl font-black text-lg flex items-center justify-center gap-3 shadow-xl shadow-axius-blue/30 hover:bg-axius-dark-blue active:scale-95 transition-all"
               >
                 <ShoppingCart v-if="!isAdded" :size="24" />
                 <CheckCircle2 v-else :size="24" />
@@ -159,7 +159,7 @@ const updateFromPacks = () => {
               </button>
               <button 
                 @click="showOneClickModal = true"
-                class="bg-white text-gray-900 border-2 border-gray-200 py-5 px-8 rounded-2xl font-black text-lg hover:border-istok-blue hover:text-istok-blue transition-all"
+                class="bg-white text-gray-900 border-2 border-gray-200 py-5 px-8 rounded-2xl font-black text-lg hover:border-axius-blue hover:text-axius-blue transition-all"
               >
                 Купить в 1 клик
               </button>
@@ -169,15 +169,15 @@ const updateFromPacks = () => {
           <!-- Benefits -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="flex items-center gap-3 text-sm font-bold text-gray-600">
-              <div class="p-2 bg-gray-50 rounded-lg"><Truck :size="20" class="text-istok-blue" /></div>
+              <div class="p-2 bg-gray-50 rounded-lg"><Truck :size="20" class="text-axius-blue" /></div>
               Доставка сегодня
             </div>
             <div class="flex items-center gap-3 text-sm font-bold text-gray-600">
-              <div class="p-2 bg-gray-50 rounded-lg"><ShieldCheck :size="20" class="text-istok-blue" /></div>
+              <div class="p-2 bg-gray-50 rounded-lg"><ShieldCheck :size="20" class="text-axius-blue" /></div>
               Гарантия 12 мес.
             </div>
             <div class="flex items-center gap-3 text-sm font-bold text-gray-600">
-              <div class="p-2 bg-gray-50 rounded-lg"><RotateCcw :size="20" class="text-istok-blue" /></div>
+              <div class="p-2 bg-gray-50 rounded-lg"><RotateCcw :size="20" class="text-axius-blue" /></div>
               Возврат 30 дней
             </div>
           </div>
@@ -189,21 +189,21 @@ const updateFromPacks = () => {
         <button 
           @click="activeTab = 'description'"
           class="pb-4 text-lg font-bold transition-all border-b-2"
-          :class="activeTab === 'description' ? 'border-istok-blue text-gray-900' : 'border-transparent text-gray-400 hover:text-gray-600'"
+          :class="activeTab === 'description' ? 'border-axius-blue text-gray-900' : 'border-transparent text-gray-400 hover:text-gray-600'"
         >
           Описание
         </button>
         <button 
           @click="activeTab = 'specs'"
           class="pb-4 text-lg font-bold transition-all border-b-2"
-          :class="activeTab === 'specs' ? 'border-istok-blue text-gray-900' : 'border-transparent text-gray-400 hover:text-gray-600'"
+          :class="activeTab === 'specs' ? 'border-axius-blue text-gray-900' : 'border-transparent text-gray-400 hover:text-gray-600'"
         >
           Характеристики
         </button>
         <button 
           @click="activeTab = 'reviews'"
           class="pb-4 text-lg font-bold transition-all border-b-2"
-          :class="activeTab === 'reviews' ? 'border-istok-blue text-gray-900' : 'border-transparent text-gray-400 hover:text-gray-600'"
+          :class="activeTab === 'reviews' ? 'border-axius-blue text-gray-900' : 'border-transparent text-gray-400 hover:text-gray-600'"
         >
           Отзывы ({{ product.reviews }})
         </button>
@@ -237,7 +237,7 @@ const updateFromPacks = () => {
           <MessageCircle :size="48" class="mx-auto text-gray-200 mb-4" />
           <h3 class="text-xl font-bold text-gray-900">Пока нет отзывов</h3>
           <p class="text-gray-500 mt-2">Станьте первым, кто оценит этот товар!</p>
-          <button class="mt-8 text-istok-blue font-bold border-b-2 border-istok-blue">Оставить отзыв</button>
+          <button class="mt-8 text-axius-blue font-bold border-b-2 border-axius-blue">Оставить отзыв</button>
         </div>
       </div>
     </div>
@@ -253,9 +253,9 @@ const updateFromPacks = () => {
         <form @submit.prevent class="space-y-6">
           <div>
             <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Номер телефона</label>
-            <input type="tel" placeholder="+7 (___) ___-__-__" class="w-full bg-gray-50 border-none rounded-xl py-4 px-6 focus:ring-1 focus:ring-istok-blue transition-all font-bold">
+            <input type="tel" placeholder="+7 (___) ___-__-__" class="w-full bg-gray-50 border-none rounded-xl py-4 px-6 focus:ring-1 focus:ring-axius-blue transition-all font-bold">
           </div>
-          <button class="w-full bg-istok-blue text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-istok-blue/30 hover:bg-istok-dark-blue transition-all">
+          <button class="w-full bg-axius-blue text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-axius-blue/30 hover:bg-axius-dark-blue transition-all">
             Жду звонка
           </button>
         </form>
@@ -275,3 +275,4 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 </style>
+

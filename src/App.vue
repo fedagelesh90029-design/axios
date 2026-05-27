@@ -27,3 +27,4 @@ import Footer from './components/layout/Footer.vue'
   opacity: 0;
 }
 </style>
+

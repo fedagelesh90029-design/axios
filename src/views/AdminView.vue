@@ -22,7 +22,7 @@ const searchQuery = ref('')
 
 const stats = [
   { label: 'Продажи за месяц', value: '1.2M ₽', change: '+12%', icon: TrendingUp, color: 'text-emerald-600 bg-emerald-50' },
-  { label: 'Новые заказы', value: '48', change: '+5', icon: ShoppingBag, color: 'text-istok-blue bg-istok-blue/10' },
+  { label: 'Новые заказы', value: '48', change: '+5', icon: ShoppingBag, color: 'text-axius-blue bg-axius-blue/10' },
   { label: 'Активных товаров', value: '1,240', change: '0', icon: Package, color: 'text-amber-600 bg-amber-50' },
   { label: 'Пользователи', value: '850', change: '+24', icon: Users, color: 'text-purple-600 bg-purple-50' },
 ]
@@ -51,7 +51,7 @@ const recentOrders = [
         <button 
           @click="activeTab = 'dashboard'"
           class="w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm transition-all"
-          :class="activeTab === 'dashboard' ? 'bg-istok-blue text-white shadow-lg shadow-istok-blue/20' : 'text-gray-500 hover:bg-gray-50'"
+          :class="activeTab === 'dashboard' ? 'bg-axius-blue text-white shadow-lg shadow-axius-blue/20' : 'text-gray-500 hover:bg-gray-50'"
         >
           <LayoutDashboard :size="20" />
           Дашборд
@@ -59,7 +59,7 @@ const recentOrders = [
         <button 
           @click="activeTab = 'catalog'"
           class="w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm transition-all"
-          :class="activeTab === 'catalog' ? 'bg-istok-blue text-white shadow-lg shadow-istok-blue/20' : 'text-gray-500 hover:bg-gray-50'"
+          :class="activeTab === 'catalog' ? 'bg-axius-blue text-white shadow-lg shadow-axius-blue/20' : 'text-gray-500 hover:bg-gray-50'"
         >
           <Package :size="20" />
           Каталог
@@ -67,7 +67,7 @@ const recentOrders = [
         <button 
           @click="activeTab = 'orders'"
           class="w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm transition-all"
-          :class="activeTab === 'orders' ? 'bg-istok-blue text-white shadow-lg shadow-istok-blue/20' : 'text-gray-500 hover:bg-gray-50'"
+          :class="activeTab === 'orders' ? 'bg-axius-blue text-white shadow-lg shadow-axius-blue/20' : 'text-gray-500 hover:bg-gray-50'"
         >
           <ShoppingBag :size="20" />
           Заказы
@@ -118,7 +118,7 @@ const recentOrders = [
         <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
           <div class="p-8 border-b border-gray-50 flex justify-between items-center">
             <h2 class="text-xl font-bold text-gray-900">Последние заказы</h2>
-            <button class="text-sm font-bold text-istok-blue hover:underline">Все заказы</button>
+            <button class="text-sm font-bold text-axius-blue hover:underline">Все заказы</button>
           </div>
           <table class="w-full text-left">
             <thead>
@@ -141,7 +141,7 @@ const recentOrders = [
                   <span 
                     class="px-3 py-1 rounded-full text-[10px] font-bold uppercase"
                     :class="{
-                      'bg-istok-blue/10 text-istok-blue': order.status === 'Новый',
+                      'bg-axius-blue/10 text-axius-blue': order.status === 'Новый',
                       'bg-amber-100 text-amber-600': order.status === 'В обработке',
                       'bg-emerald-100 text-emerald-600': order.status === 'Выполнен'
                     }"
@@ -150,7 +150,7 @@ const recentOrders = [
                   </span>
                 </td>
                 <td class="px-8 py-5 text-right">
-                  <button class="p-2 text-gray-400 hover:text-istok-blue transition-colors">
+                  <button class="p-2 text-gray-400 hover:text-axius-blue transition-colors">
                     <ChevronRight :size="20" />
                   </button>
                 </td>
@@ -164,7 +164,7 @@ const recentOrders = [
       <div v-if="activeTab === 'catalog'" class="space-y-10">
         <div class="flex justify-between items-center">
           <h1 class="text-3xl font-black text-gray-900">Управление товарами</h1>
-          <button class="bg-istok-blue text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-istok-blue/20 hover:bg-istok-dark-blue transition-all">
+          <button class="bg-axius-blue text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-axius-blue/20 hover:bg-axius-dark-blue transition-all">
             <Plus :size="20" />
             Добавить товар
           </button>
@@ -177,11 +177,11 @@ const recentOrders = [
               v-model="searchQuery"
               type="text" 
               placeholder="Поиск по названию или артикулу..." 
-              class="w-full bg-white border border-gray-200 rounded-xl py-4 px-6 pl-14 focus:ring-1 focus:ring-istok-blue transition-all shadow-sm"
+              class="w-full bg-white border border-gray-200 rounded-xl py-4 px-6 pl-14 focus:ring-1 focus:ring-axius-blue transition-all shadow-sm"
             >
             <Search class="absolute left-6 top-4.5 text-gray-400" :size="20" />
           </div>
-          <select class="bg-white border border-gray-200 rounded-xl px-6 font-bold text-sm focus:ring-1 focus:ring-istok-blue shadow-sm">
+          <select class="bg-white border border-gray-200 rounded-xl px-6 font-bold text-sm focus:ring-1 focus:ring-axius-blue shadow-sm">
             <option>Все категории</option>
             <option>Инструменты</option>
             <option>Крепеж</option>
@@ -214,10 +214,10 @@ const recentOrders = [
                   <span class="text-sm font-bold text-emerald-600">24 шт.</span>
                 </td>
                 <td class="px-8 py-5 text-right space-x-2">
-                  <button class="p-2 text-gray-400 hover:text-istok-blue transition-colors">
+                  <button class="p-2 text-gray-400 hover:text-axius-blue transition-colors">
                     <Edit :size="18" />
                   </button>
-                  <button class="p-2 text-gray-400 hover:text-istok-red transition-colors">
+                  <button class="p-2 text-gray-400 hover:text-axius-red transition-colors">
                     <Trash2 :size="18" />
                   </button>
                 </td>
@@ -236,3 +236,4 @@ const recentOrders = [
     </main>
   </div>
 </template>
+

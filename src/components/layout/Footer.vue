@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin } from 'lucide-vue-next'
 </script>
 
 <template>
-  <footer class="bg-istok-dark-blue text-white pt-16 pb-8 px-4 mt-auto">
+  <footer class="bg-axius-dark-blue text-white pt-16 pb-8 px-4 mt-auto">
     <div class="container mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <!-- Company -->
@@ -49,7 +49,7 @@ import { Phone, Mail, MapPin } from 'lucide-vue-next'
             </li>
             <li class="flex items-center gap-3">
               <Mail :size="18" class="text-white opacity-80" />
-              <a href="mailto:info@istoksochi.ru" class="hover:underline">info@istoksochi.ru</a>
+              <a href="mailto:info@axius-shop.ru" class="hover:underline">info@axius-shop.ru</a>
             </li>
             <li class="flex items-center gap-3">
               <MapPin :size="18" class="text-white opacity-80" />
@@ -61,7 +61,7 @@ import { Phone, Mail, MapPin } from 'lucide-vue-next'
 
       <!-- Bottom Bar -->
       <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-60">
-        <p>© 2026 ИСТОК. Все права защищены.</p>
+        <p>© 2026 АКСИУС. Все права защищены.</p>
         <div class="flex gap-8">
           <a href="#" class="hover:underline">Политика конфиденциальности</a>
           <a href="#" class="hover:underline">Условия использования</a>
@@ -70,3 +70,4 @@ import { Phone, Mail, MapPin } from 'lucide-vue-next'
     </div>
   </footer>
 </template>
+

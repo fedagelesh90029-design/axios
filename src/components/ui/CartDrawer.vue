@@ -23,9 +23,9 @@ const formatPrice = (price: number) => {
       <div class="relative w-full max-w-md bg-white shadow-2xl flex flex-col h-full animate-in slide-in-from-right duration-300">
         <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-white sticky top-0 z-10">
           <h2 class="text-xl font-bold text-gray-900 flex items-center gap-3">
-            <ShoppingBag :size="24" class="text-istok-blue" />
+            <ShoppingBag :size="24" class="text-axius-blue" />
             Корзина
-            <span class="bg-istok-blue/10 text-istok-blue px-2 py-0.5 rounded text-sm">{{ cart.totalCount.value }}</span>
+            <span class="bg-axius-blue/10 text-axius-blue px-2 py-0.5 rounded text-sm">{{ cart.totalCount.value }}</span>
           </h2>
           <button @click="emit('close')" class="text-gray-400 hover:text-gray-600 transition-colors p-1">
             <X :size="24" />
@@ -44,14 +44,14 @@ const formatPrice = (price: number) => {
               <img :src="item.image" :alt="item.name" class="w-full h-full object-contain">
             </div>
             <div class="flex-grow">
-              <h4 class="text-sm font-medium text-gray-800 line-clamp-2 mb-1 group-hover:text-istok-blue transition-colors cursor-pointer">{{ item.name }}</h4>
+              <h4 class="text-sm font-medium text-gray-800 line-clamp-2 mb-1 group-hover:text-axius-blue transition-colors cursor-pointer">{{ item.name }}</h4>
               <div class="flex justify-between items-center">
                 <div class="text-sm">
                   <span class="font-bold text-gray-900">{{ formatPrice(item.price) }}</span>
                   <span class="text-gray-400 mx-2">×</span>
                   <span class="text-gray-600">{{ item.quantity }} шт.</span>
                 </div>
-                <button @click="cart.removeItem(item.id)" class="text-gray-300 hover:text-istok-red transition-colors p-1">
+                <button @click="cart.removeItem(item.id)" class="text-gray-300 hover:text-axius-red transition-colors p-1">
                   <Trash2 :size="16" />
                 </button>
               </div>
@@ -64,7 +64,7 @@ const formatPrice = (price: number) => {
             <span class="text-gray-500 font-medium">Итого к оплате</span>
             <span class="text-2xl font-black text-gray-900">{{ formatPrice(cart.totalPrice.value) }}</span>
           </div>
-          <button class="w-full bg-istok-blue text-white py-4 rounded-xl font-bold text-lg hover:bg-istok-dark-blue transition-all shadow-lg shadow-istok-blue/20">
+          <button class="w-full bg-axius-blue text-white py-4 rounded-xl font-bold text-lg hover:bg-axius-dark-blue transition-all shadow-lg shadow-axius-blue/20">
             Оформить заказ
           </button>
         </div>
@@ -82,3 +82,4 @@ const formatPrice = (price: number) => {
   transform: translateX(100%);
 }
 </style>
+
