@@ -57,7 +57,6 @@ const getIcon = (iconName: string) => {
               <div class="p-3 bg-axius-blue text-white rounded-xl shadow-lg shadow-axius-blue/20 group-hover:bg-axius-dark-blue transition-all">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
               </div>
-              <span class="text-2xl font-black tracking-tighter text-gray-900 group-hover:text-axius-blue transition-colors uppercase">Axius</span>
             </div>
           </router-link>
         </div>
